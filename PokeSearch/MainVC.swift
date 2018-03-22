@@ -32,7 +32,7 @@ class MainVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         guard let destinationVC = segue.destination as? PokemonListVC else {return}
-        slideInTransitioningDelegate.direction = .right
+        slideInTransitioningDelegate.direction = .bottom
         slideInTransitioningDelegate.disableCompactHeight = false
         destinationVC.transitioningDelegate = slideInTransitioningDelegate
         destinationVC.modalPresentationStyle = .custom

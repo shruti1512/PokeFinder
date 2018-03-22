@@ -69,9 +69,9 @@ import UIKit
         frame.size = size(forChildContentContainer: presentedViewController, withParentContainerSize: containerView!.bounds.size)
         switch direction {
             case .right:
-                frame.origin = CGPoint(x: containerView!.frame.width*1/3, y: 0.0)
+                frame.origin = CGPoint(x: containerView!.frame.width, y: 0.0)
             case .bottom:
-                frame.origin = CGPoint(x: 0.0, y: containerView!.frame.height*1/3)
+                frame.origin = CGPoint(x: 0.0, y: 0.0)
         default:
             frame.origin = CGPoint(x: 0.0, y: 0.0)
         }
@@ -86,9 +86,9 @@ import UIKit
         var viewSize: CGSize = .zero
         switch direction {
             case .left, .right:
-                viewSize = CGSize(width: parentSize.width*2/3, height: parentSize.height)
+                viewSize = CGSize(width: parentSize.width, height: parentSize.height)
             case .top, .bottom:
-                viewSize = CGSize(width: parentSize.width, height: parentSize.height*2/3)
+                viewSize = CGSize(width: parentSize.width, height: parentSize.height)
         }
         
         return viewSize
